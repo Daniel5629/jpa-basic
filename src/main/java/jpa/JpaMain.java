@@ -29,11 +29,12 @@ public class JpaMain {
         tx.begin();
 
         try {
-            // Member 생성
+            // Member 생성(비영속)
             Member member = new Member();
             member.setId(1L);
             member.setName("daniel");
 
+            // 영속 - DB 저장된 상태 아님.
             em.persist(member);
 
             // Member 조회
@@ -62,6 +63,7 @@ public class JpaMain {
             em.remove(findMember);
 
             // commit transaction
+            // DB에 쿼리가 반영
             tx.commit();
             
         } catch (Exception e) {

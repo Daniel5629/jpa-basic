@@ -6,6 +6,15 @@ import javax.persistence.Id;
 @Entity
 public class Member {
 
+    // JPA는 기본생성자가 반드시 필요하다.
+    public Member() {
+    }
+
+    public Member(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     @Id
     private Long id;
 
