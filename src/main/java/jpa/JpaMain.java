@@ -13,6 +13,8 @@ public class JpaMain {
 
     private static final Logger log = LoggerFactory.getLogger(JpaMain.class);
 
+    // h2 DB 실행 해야함.
+
     public static void main(String[] args) {
 
         // persistence unit name: persistence.xml 의 persistence-unit name
