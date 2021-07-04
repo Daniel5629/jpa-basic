@@ -14,6 +14,7 @@ public class JpaMain {
     private static final Logger log = LoggerFactory.getLogger(JpaMain.class);
 
     // h2 DB 실행 해야함.
+    // h2 -webAllowOthers
 
     public static void main(String[] args) {
 
@@ -35,6 +36,7 @@ public class JpaMain {
             Member member = new Member();
             member.setId(1L);
             member.setName("daniel");
+            member.setRoleType(RoleType.USER);
 
             // 영속 - DB 저장된 상태 아님.
             em.persist(member);
